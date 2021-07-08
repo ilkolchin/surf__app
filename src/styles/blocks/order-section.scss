@@ -1,0 +1,17 @@
+.order-section {
+    background: url(../img/backgrounds/form.png) center top/cover no-repeat;
+    background-color: $black;
+    color: $white;
+}
+
+.order-section__title {
+    color: $white;
+
+    @include tablets {
+        margin-bottom: rem(31px);
+    }
+
+    @include phones {
+        margin-bottom: rem(43px);
+    }
+}

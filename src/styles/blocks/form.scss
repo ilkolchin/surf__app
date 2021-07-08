@@ -1,0 +1,110 @@
+.form {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 17%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__col {
+    flex: 1;
+    margin-right: rem(26px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(14px);
+
+    &--textarea {
+        margin-bottom: rem(30px);
+    }
+
+    @include tablets {
+        margin-bottom: rem(18px);
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(12px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    padding: rem(15px) rem(12px);
+    border: rem(3px) solid transparent;
+    border-radius: rem(4px);
+
+    &:hover {
+        box-shadow: 0 0 rem(3px) rem(1px) $yellow;
+    }
+    
+    &:focus {
+        border-color: $yellow;
+        box-shadow: 0 0 rem(3px) rem(1px) $yellow;
+    }
+
+    &--textarea {
+        height: rem(152px);
+        resize: none;
+
+        @include tablets {
+            height: rem(84px);
+        }
+        
+        @include phones {
+            height: rem(93px);
+            margin-bottom: rem(5px);
+        }
+    }
+
+    @include tablets {
+        padding: rem(6px);
+    }
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(16px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include phones {
+        justify-content: center;
+        margin-bottom: rem(25px);
+    }
+}
+
+.form__btns {
+    margin-top: rem(48px);
+
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.input-error {
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 rem(3px) rem(1px) rgb(255, 0, 0);
+}

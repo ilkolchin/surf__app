@@ -1,0 +1,36 @@
+.duration {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.duration__btn-wrap {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.duration__img {
+  height: 0;
+  width: 0;
+  border: 11px solid transparent;
+  border-left-color: #626262;
+  border-right-width: 0;
+  background: transparent;
+  outline: 0;
+
+  &.active {
+    border: 7px solid #626262;
+    height: 20px;
+    border-top: 0;
+    border-bottom: 0;
+    padding: 1px;
+  }
+}
+
+.duration__length-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

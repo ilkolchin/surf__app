@@ -1,0 +1,64 @@
+.nav-icon {
+    display: none;
+
+    @include tablets {
+    display: inline-flex;
+    }
+}
+
+
+#nav-icon6 {
+    width: 24px;
+    height: 5px;
+    position: relative;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+#nav-icon6 span {
+    height: 5px;
+    width: 24px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    transition-duration: .25s;
+    transition-delay: .25s;
+}
+#nav-icon6 span:before {
+    left: 0;
+    position: absolute;
+    top: rem(10px);
+    height: 5px;
+    width: 24px;
+    background-color: #fff;
+    content: "";
+    border-radius: 20px;
+    transition-duration: .25s;
+    transition: transform .25s, top .25s .25s;
+}
+#nav-icon6 span:after {
+    left: 0;
+    position: absolute;
+    top: rem(-10px);
+    height: 5px;
+    width: 24px;
+    background-color: #fff;
+    content: "";
+    border-radius: 20px;
+    transition-duration: .25s;
+    transition: transform .25s, top .25s .25s;
+}
+#nav-icon6.open span {
+    transition-duration: 0.1s;
+    transition-delay: .25s;
+    background: transparent;
+}
+#nav-icon6.open span:before {
+    transition: top .25s, transform .25s .25s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+}
+#nav-icon6.open span:after {
+    transition: top 0.4s, transform .25s .25s;
+    top: 0px;
+    transform: rotateZ(45deg);
+}

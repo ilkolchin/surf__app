@@ -1,0 +1,40 @@
+.btn {
+    border-radius: rem(100px);
+    border: none;
+    display: inline-block;
+    margin-right: rem(10px);
+
+    &--theme--yellow {
+        padding: rem(19px) rem(42px);
+        font-size: rem(16px);
+        color: #000;
+        background-color: $yellow;
+        text-transform: uppercase;
+        font-weight: 800;
+    
+        &:hover {
+            background-color: #FFD517;
+        }
+
+        @include phones {
+            font-size: rem(21.6px);
+        }
+}
+    &--theme--transparent {
+        font-size: rem(18px);
+        color: $white;
+        background-color: transparent;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &:hover, .form {
+        cursor: pointer;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

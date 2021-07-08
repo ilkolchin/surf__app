@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include tablets {
+        align-items: center;
+    }
+}

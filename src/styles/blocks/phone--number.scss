@@ -1,0 +1,39 @@
+.phone--number {
+    font-size: rem(22px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        text-shadow: 0px -2px 5px rgb(59 95 147);
+    }
+
+    .header > & {
+        @include tablets {
+            display: none;
+        }
+    }
+
+    @include phones {
+        justify-content: center;
+        margin:5% 0;
+    }
+}
+
+.phone--number__icon {
+    flex-shrink: 0;
+}
+
+.phone--number__icon-elem {
+    height: rem(15px);
+    width: rem(12px);
+    margin-right: rem(6px);
+
+    &--theme--white {
+        fill: white;
+    }
+
+    &--theme--gray {
+        fill: $gray;
+    }
+}

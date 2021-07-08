@@ -1,0 +1,19 @@
+.duration-length {
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, $yellow 0%, $yellow 0%, #626262 0%);
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.duration-length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: $yellow;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}

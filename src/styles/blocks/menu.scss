@@ -1,0 +1,51 @@
+.menu {
+    margin: 0 rem(30px);
+    padding-top: rem(5px);
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu__item {
+    font-weight: 700;
+    margin-right: rem(22px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        text-shadow: 0px -2px 5px rgb(59 95 147);
+    }
+}
+
+.menu--vertical {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+
+    .menu__list {
+        flex-direction: column;
+    }
+
+    .menu__item {
+        margin-right: 0;
+        margin-bottom: rem(25px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            text-shadow: 0px -2px 10px rgba($color: #fff, $alpha: 0.7);
+        }
+    }
+}

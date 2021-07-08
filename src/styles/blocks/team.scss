@@ -1,0 +1,156 @@
+.team {
+    position: relative;
+}
+
+.team__title {
+    margin-bottom: rem(53px);
+
+    @include tablets {
+        margin-bottom: rem(36px);
+    }
+}
+
+.team__list {
+    display: flex;
+
+    &--version--desktop {
+        @include tablets {
+            display: none;
+        }
+    }
+    
+    &--version--tablets {
+        display: none;
+
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.team__item {
+    margin-right: rem(21px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .team__list--version--tablets & {
+        margin-right: 0;
+        // margin-bottom: rem(19px);
+    }
+}
+
+.team__avatar {
+    width: rem(220px);
+    height: rem(290px);
+    margin-bottom: rem(22px);
+
+    .team__list--version--tablets & {
+        width: rem(230px);
+        height: rem(310px);
+        margin-bottom: 0.9rem;
+
+        @include phones {
+            width: 8.5rem;
+            height: 11.6rem;
+            margin-bottom: 1.2rem;
+            padding-top: 0.4rem;
+        }
+    }
+}
+
+.team__member-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    cursor: pointer;
+
+    .team__list--version--tablets & {
+        margin-bottom: 1.1rem;
+
+        @include phones {
+            margin-bottom: 0.4rem;
+        }
+    }
+}
+
+.team__member-name {
+    font-size: rem(21px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: rem(10px);
+    color: $black;
+    padding-right: rem(7px);
+
+    .team__list--version--tablets & {
+        margin-bottom: 0;
+
+        @include phones {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.triangle {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #292929;
+
+    &--active {
+        border-top: 0;
+        border-bottom: 8px solid #292929;
+    }
+}
+
+.team__desc {
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: height 0.3s;
+
+    .team__list--version--tablets & {
+        position: unset;
+        display: flex;
+        justify-content: center;
+    }
+
+    &--active {
+        height: rem(100px);
+
+        .team__list--version--tablets & {
+            height: rem(425px);
+
+            @include phones {
+                height: 17.5rem;
+            }
+        }
+    }
+}
+
+.team__desc-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.team__member-prof {
+    font-weight: 400;
+    line-height: 1.2;
+
+    .team__list--version--tablets & {
+        font-weight: bold;
+        color: $black;
+    }
+}
+
+.team__member-text {
+    font-weight: 300;
+    max-width: rem(220px);
+}

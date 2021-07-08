@@ -1,0 +1,24 @@
+.features {
+    display: flex;
+    width: 53%;
+}
+
+.feature {
+    display: flex;
+}
+
+.feature__icon {
+    margin-right: rem(11px);
+}
+
+.feature__icon-svg {
+    width: rem(35px);
+    height: rem(35px);
+    fill: white;
+}
+
+.feature__text {
+    font-weight: 700;
+    line-height: rem(18px);
+    font-size: rem(16px);
+}

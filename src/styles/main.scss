@@ -1,0 +1,28 @@
+//constants
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
+//colors
+$yellow: #FEDB3F;
+$gray: #666666;
+$black: #292929;
+$white: #FFFFFF;
+
+//z-indexes
+
+$z-fixed-menu: 100;
+$z-fullscreen-menu: 10000;
+
+//media
+@import "layout/media";
+
+//layout
+@import "layout/base";
+
+//blocks
+@import "./blocks/*.scss";

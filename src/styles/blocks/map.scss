@@ -1,0 +1,13 @@
+#map {
+  width: 100%;
+  height: 90%;
+
+  @include phones {
+    height: 80%;
+  }
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 100%;
+}

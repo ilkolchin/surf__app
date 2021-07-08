@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    width: 100%;
+    bottom: 0;
+    
+
+    @include tablets {
+        padding-right: 2.5%;
+    }
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 0;
+        padding-right: 0;
+    }
+}
+
+.footer__container{
+    background-color: $white;
+}
+
+.footer__adress {
+    font-size: rem(21px);
+    line-height: rem(24px);
+}

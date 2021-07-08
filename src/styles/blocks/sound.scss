@@ -1,0 +1,35 @@
+.sound {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 29px;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    display: block;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%) rotate(42deg);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.sound__mic {
+  cursor: pointer;
+}
+
+.sound__volume {
+  display: flex;
+  align-content: center;
+}
