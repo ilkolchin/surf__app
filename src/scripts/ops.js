@@ -7,7 +7,6 @@
     const isTablet = window.matchMedia('(max-width: 768px)').matches;
 
 
-
     let inScroll = false;
 
 
@@ -64,10 +63,10 @@
         const nextSection = activeSection.next();
         const prevSection = activeSection.prev();
 
-        if ($('body').hasClass('locked') || ($('html').hasClass('with-fancybox'))) return;
 
         return {
             next() {
+                if ($('body').hasClass('locked') || ($('html').hasClass('with-fancybox'))) return;
                 if (nextSection.length) {
                     performTransition(nextSection.index())
                 }
@@ -75,6 +74,7 @@
 
             prev() {
                 if (prevSection.length) {
+                    if ($('body').hasClass('locked') || ($('html').hasClass('with-fancybox'))) return;
                     performTransition(prevSection.index())
                 }
             }
@@ -132,16 +132,15 @@
             ) {
                 const scroller = viewportScroller();
                 let scrollDirection = '';
-    
+
                 if (direction === 'up') scrollDirection = 'next';
                 if (direction === 'down') scrollDirection = 'prev';
-                if(direction !== 'up' && direction !== 'down') return;
-    
+                if (direction !== 'up' && direction !== 'down') return;
+
                 scroller[scrollDirection]();
             },
         })
     }
-    
-    
+
 
 })()

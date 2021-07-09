@@ -18,7 +18,7 @@ const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require('./gulp.config');
 
 task('clean', () => {
   return src(`${DIST_PATH}`, { read: false })
-    .pipe(gulpClean({force:true}))
+    .pipe(gulpClean({ force:true }))
 })
 
 task('copy:html', () => {

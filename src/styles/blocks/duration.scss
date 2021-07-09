@@ -14,15 +14,15 @@
 .duration__img {
   height: 0;
   width: 0;
-  border: 11px solid transparent;
-  border-left-color: #626262;
+  border: 10px solid transparent;
+  border-left-color: $white;
   border-right-width: 0;
   background: transparent;
   outline: 0;
 
   &.active {
-    border: 7px solid #626262;
-    height: 20px;
+    border: 7px solid $white;
+    height: 18px;
     border-top: 0;
     border-bottom: 0;
     padding: 1px;
