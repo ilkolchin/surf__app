@@ -94,5 +94,7 @@ task('default',
 task('build',
   series(
     'clean',
-    parallel('copy:html', 'styles', 'copy:img', 'copy:mp4', 'scripts'))
+    parallel('copy:html', 'styles', 'copy:img', 'copy:mp4', 'scripts'),
+    parallel('watch', 'server')
+    )
 );

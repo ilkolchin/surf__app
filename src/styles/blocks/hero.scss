@@ -13,6 +13,14 @@
 
     &--active {
         background: linear-gradient(173deg, rgba(25, 104, 177, 1) 0%, rgba(41, 41, 41, 1) 10%);
+
+        @include tablets {
+            background-position: unset;
+        }
+
+        @include phones {
+            background-position: unset;
+        }
     }
 }
 

@@ -28,9 +28,12 @@
 }
 
 .menu--vertical {
-    display: flex;
     height: 80%;
     justify-content: center;
+    
+    @include tablets {
+        display: flex;
+    }
 
     .menu__list {
         flex-direction: column;
