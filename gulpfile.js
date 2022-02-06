@@ -1,22 +1,24 @@
-const { src, dest, task, series, watch, parallel } = require("gulp");
-const gulpClean = require('gulp-clean');
-const sass = require('gulp-sass')(require('sass'));
-const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
+const { src, dest, task, series, watch, parallel } = require("gulp"); //методы gulp
+const gulpClean = require('gulp-clean');  //очистка dist
+const sass = require('gulp-sass')(require('sass')); //компилятор sass
+const concat = require('gulp-concat');  //склейка css % js в один файл
+const browserSync = require('browser-sync').create(); //браузер для просмотра
 const reload = browserSync.reload
-const sassGlob = require('gulp-sass-glob');
-const autoprefixer = require('gulp-autoprefixer');
-const gcmq = require('gulp-group-css-media-queries');
-const cleanCSS = require('gulp-clean-css');
-const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
-const gulpif = require('gulp-if');
+const sassGlob = require('gulp-sass-glob'); //подключение всех scss через main (*.scss)
+const autoprefixer = require('gulp-autoprefixer');  //префиксы для разных браузеров
+const gcmq = require('gulp-group-css-media-queries'); //объединение медиа-запросов
+const cleanCSS = require('gulp-clean-css'); //минификация css
+const sourcemaps = require('gulp-sourcemaps');  //отображение путей в браузере
+const uglify = require('gulp-uglify');  // минификация JS
+const gulpif = require('gulp-if');  //'if' для разделения на dev & prod
+// Также можно установить: 'gulp-smile-px2rem' — перевод в rem; 'Babel' для ES5; 
+// 'gulp-svgo', 'gulp-svg-sprite' для svg
 
 const env = process.env.NODE_ENV;
 
 const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require('./gulp.config');
 
-task('clean', () => {
+task('clean', () => { //очистка папки dist
   return src(`${DIST_PATH}`, { read: false })
     .pipe(gulpClean({ force:true }))
 })
